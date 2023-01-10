@@ -28,3 +28,29 @@ n=[2+3*s+4*s^2]; //input numerator of transfer function
 d=[1+s+s^2]; //input denominator of transfer function
 h=syslin("c",n,d);
 plzr(h);
+
+OUTPUT:
+
+     4     
+   ------  
+   2s +s²  
+
+  "the series transfer function of T1="
+
+   8 +5s   
+   ------  
+   2s +s²  
+
+  "the parallel transfer function of T2="
+
+       s      
+   ---------  
+   4 +2s +s²  
+
+  "the postive feedback transfer fuction of T3="
+
+       s       
+   ----------  
+   -4 +2s +s²  
+
+  "the negative feedback transfer function of T4="
