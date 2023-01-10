@@ -19,3 +19,12 @@ plot2d(t,gi)
 xlabel('Time {t} (sec)')
 ylabel('Impulse response {c(t)}')
 title('Impulse Response of a First Order System
+
+OUTPUT:
+
+ 1    
+   ----  
+   2 +s  
+
+  "The given first order system function G ="
+
