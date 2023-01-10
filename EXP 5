@@ -1,0 +1,98 @@
+clear;clc;
+xdel(winsid());
+mode(0);
+
+Mp=0.2;
+tp=1;
+J=1;//kg.mˆ2
+B=1;//N−/rad/sec
+
+s=%s;
+pi=%pi;
+Eq=(s*pi)^2-log(1/Mp)^2*(1-s^2);
+disp(Eq, 'The obtained equation')
+
+x=roots(Eq);
+disp(x,'x=')
+
+zeta=abs(x(1));
+disp(zeta,'zeta=')
+
+wd=pi/tp;
+disp(wd,'damped frequency wd=')
+
+wn=wd/sqrt(1-zeta^2);
+disp(wn,'natural frequency wn=')
+
+K=J*wn^2;
+disp(K, 'K=')
+
+Kh=(2*sqrt(K*J)*zeta-B)/K;
+disp(Kh,'Kh=')
+
+sigma=wn*zeta;
+disp(sigma, 'sigma=')
+
+_beta=atan(wd/sigma);
+disp(_beta,'Beta =')
+
+tr=(pi-_beta)/wd;
+disp(tr,'Rise time tr=')
+
+ts_2percent=4/sigma;
+disp(ts_2percent, 'Settling time for 2% error=')
+
+ts_5percent=3/sigma;
+disp(ts_5percent, 'Settling time for 5% error=')
+
+
+
+OUTPUT:
+-2.5902904 +12.459895s²
+
+  "The obtained equation"
+
+   0.4559498 + 0.i
+  -0.4559498 + 0.i
+
+  "x="
+
+   0.4559498
+
+  "zeta="
+
+   3.1415927
+
+  "damped frequency wd="
+
+   3.5298576
+
+  "natural frequency wn="
+
+   12.459895
+
+  "K="
+
+   0.1780814
+
+  "Kh="
+
+   1.6094379
+
+  "sigma="
+
+   1.0973572
+
+  "Beta ="
+
+   0.6507004
+
+  "Rise time tr="
+
+   2.4853397
+
+  "Settling time for 2% error="
+
+   1.8640048
+
+  "Settling time for 5% error="
