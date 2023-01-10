@@ -34,6 +34,31 @@ plot(t,y1)
 title('Critically damped system');
 
 z=10;//Over damped system
+
+OUTPUT:
+
+ 
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+
+ 
+
+
+
 num=36; den=36+2*z*s+s^2;
 TF=syslin('c',num,den);
 subplot(224)
